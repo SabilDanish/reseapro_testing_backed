@@ -17,7 +17,7 @@ module.exports = {
             new Contact({email}).save()
             .then(response => {
                 const mailOptions = {
-                    from: 'sabil.danish1997@gmail.com',
+                    from: process.env.email,
                     to: email,
                     subject: 'Email Received',
                     html: '<h1>Your Email is Received</h1><p>We have received your email: ' + email + '</p>'
